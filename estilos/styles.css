@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background-color: #904872;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: 50px auto;
+}
+
+@keyframes cards {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff") format("woff");
+}
+.disabled {
+  cursor: not-allowed;
+}
+
+h1 {
+  color: #08BAE3;
+  font-weight: bold;
+  font-size: 60px;
+  font-family: "Get Schwifty";
+  text-align: center;
+  margin: 0 20px;
+}
+
+#select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#select p {
+  font-size: 20px;
+  color: white;
+}
+#select div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#select div #filter {
+  font-size: 20px;
+  color: white;
+  background-color: #08BAE3;
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+}
+#select div #filter:hover {
+  cursor: pointer;
+}
+#select div #filter option {
+  font-size: 17px;
+}
+#select div button {
+  font-size: 20px;
+  height: 30px;
+  width: 200px;
+  border: none;
+  background-color: #08BAE3;
+  border-radius: 5px;
+  color: white;
+}
+#select div button:hover {
+  cursor: pointer;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 150px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  margin-top: 60px;
+}
+#content div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+#content div img {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 300px;
+  width: 250px;
+}
+#content div .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background-color: #1B863C;
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: auto;
+  width: 250px;
+}
+#content div .card-info p {
+  background-color: #1B863C;
+}
+#content div .card-info p .category {
+  font-weight: 700;
+  background-color: #1B863C;
+}
+#content div:hover {
+  animation: cards 0.5s;
+  cursor: pointer;
+}
+
+@media (min-width: 400px) {
+  h1 {
+    font-size: 90px;
+  }
+  #content div img {
+    width: 300px;
+  }
+  #content div .card-info {
+    width: 300px;
+  }
+}
+@media (min-width: 768px) {
+  #content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #select {
+    flex-direction: row;
+  }
+  #select div {
+    flex-direction: row;
+    gap: 5px;
+  }
+}/*# sourceMappingURL=styles.css.map */

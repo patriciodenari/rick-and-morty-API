@@ -1,0 +1,126 @@
+h1 {
+    color: #08BAE3;
+    font-weight: bold;
+    font-size: 60px;
+    font-family: 'Get Schwifty';
+    text-align: center;
+    margin: 0 20px;
+}
+#select {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    p {
+        font-size: 20px;
+        color: white;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        #filter {
+            font-size: 20px;
+            color: white;
+            background-color: #08BAE3;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+            option {
+                font-size: 17px;
+            }
+        }
+        button {
+            font-size: 20px;
+            height: 30px;
+            width: 200px;
+            border: none;
+            background-color: #08BAE3;
+            border-radius: 5px;
+            color: white;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+#content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 150px;
+    column-gap: 50px;
+    margin-top: 60px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        img {
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            height: 300px;
+            width: 250px;
+        }
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+            background-color: #1B863C;
+            color: white;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: auto;
+            width: 250px;
+            p {
+                background-color: #1B863C;
+                .category {
+                    font-weight: 700;
+                    background-color: #1B863C;
+                }
+            }
+        }
+        &:hover {
+            animation: cards .5s;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    h1 {
+        font-size: 90px;
+    }
+    #content {
+        div {
+            img {
+                width: 300px;
+            }
+            .card-info {
+                width: 300px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #select {
+        flex-direction: row;
+
+        div {
+            flex-direction: row;
+            gap: 5px;
+        }
+    }
+}

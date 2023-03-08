@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #904872;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 50px auto;
+}
+
+@keyframes cards {
+    0% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+
+}
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+}
+
+.disabled {
+    cursor: not-allowed;
+}
